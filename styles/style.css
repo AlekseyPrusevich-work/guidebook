@@ -1,0 +1,112 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  --main-color: #2b2a2c;
+  --main-bg-color: white;
+}
+
+body {
+    margin: 0;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.regions {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+    color: white;
+}
+.regions__warp {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+.regions__map-container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.regions__map-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.regions ul {
+    padding: 0;
+    margin-left: 3rem;
+}
+.region__map-svg {
+    display: block;
+    max-height: 100vh;
+    margin-right: auto;
+    margin-left: auto;
+}
+.map__region {
+    cursor: pointer;
+}
+.brest-region__map-region {
+    stroke: white;
+    stroke-width: 3px;
+    fill: #fce187;
+    stroke-miterlimit: 10;
+}
+.brest-region__map-region:hover {
+    transition: 0.3s;
+    fill: #ffdc69;
+}
+.map__point {
+    r: 1rem;
+    fill: red;
+    transition: .5s;
+    cursor: pointer;
+}
+.map__point:hover {
+    r: 1.2rem;
+}
+
+.region__map-container {
+    margin: 0 auto;
+}
+
+.region-map__tooltip {
+    display: none;
+    position: absolute;
+    border-radius: 8px;
+    padding: 0.6rem;
+    width: 16rem;
+    min-height: 10rem;
+    background-color: rgba(230, 230, 230, 0.7);
+    color: #000;
+    z-index: 2;
+}
+
+.region-map__tooltip img {
+    display: block;
+    max-width: 100%;
+}
+.region-map__tooltip ul {
+    padding: 0;
+    margin: 0;
+    margin-left: 1rem;
+}
+.region-map__tooltip p, .region-map__tooltip li {
+    text-indent: 1.5rem;
+    font-size: 0.7rem;
+    padding: 0;
+    margin: 0;
+}
