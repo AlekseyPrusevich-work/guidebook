@@ -52,7 +52,7 @@ body {
 }
 .region__map-svg {
     display: block;
-    max-height: 100vh;
+    max-height: 90vh;
     margin-right: auto;
     margin-left: auto;
 }
