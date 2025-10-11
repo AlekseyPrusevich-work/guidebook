@@ -73,8 +73,6 @@ class Popup {
       this.resetPopup($popup);
       $popup.fadeIn(200);
       $('body').css('overflow', 'hidden');
-
-      this.updateProgress(1, $popup);
   }
 
   closePopup($popup) {
@@ -88,6 +86,7 @@ class Popup {
   }
 
   resetPopup($popup) {
+      return;
       // Скрываем все шаги
       $popup.find('.popup__step').removeClass('active');
       // Показываем только первый шаг
