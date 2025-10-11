@@ -56,9 +56,15 @@ class Popup {
           }
       });
 
-      // Обработчик для кнопок "Далее" внутри попапов
       $(document).on('click', '.popup__button', (e) => {
-          this.handleNextButton($(e.target));
+          this.handleNavigation($(e.target));
+      });
+
+      $(document).on('click', '.popup__progress-item', (e) => {
+          const stepNumber = $(e.target).data('step');
+          if (stepNumber) {
+              this.goToStep(stepNumber, $(e.target).closest('.overlay'));
+          }
       });
   }
 
@@ -67,6 +73,8 @@ class Popup {
       this.resetPopup($popup);
       $popup.fadeIn(200);
       $('body').css('overflow', 'hidden');
+
+      this.updateProgress(1, $popup);
   }
 
   closePopup($popup) {
@@ -80,27 +88,54 @@ class Popup {
   }
 
   resetPopup($popup) {
-      return;
-
-      const $steps = $popup.find('.popup__step');
-      $steps.hide(); // Скрываем все шаги
-      $popup.find('.popup__step[data-step="1"]').show(); // Показываем только первый шаг
+      // Скрываем все шаги
+      $popup.find('.popup__step').removeClass('active');
+      // Показываем только первый шаг
+      $popup.find('.popup__step[data-step="1"]').addClass('active');
   }
 
-  // Обработка нажатия кнопки "Далее"
-  handleNextButton($button) {
+  // Обработка навигации
+  handleNavigation($button) {
       const $currentStep = $button.closest('.popup__step');
       const nextStepNumber = $button.data('next');
-      const $popupContent = $button.closest('.popup__content');
+      const $popup = $button.closest('.overlay');
       
-      // Скрываем текущий шаг
-      $currentStep.hide();
-      
-      // Показываем следующий шаг
-      const $nextStep = $popupContent.find(`.popup__step[data-step="${nextStepNumber}"]`);
-      if ($nextStep.length) {
-          $nextStep.show();
+      if (nextStepNumber) {
+          this.goToStep(nextStepNumber, $popup);
       }
+  }
+
+  // Переход к конкретному шагу
+  goToStep(stepNumber, $popup) {
+      const $steps = $popup.find('.popup__step');
+      const $targetStep = $popup.find(`.popup__step[data-step="${stepNumber}"]`);
+      
+      if ($targetStep.length) {
+          // Скрываем текущий шаг
+          $steps.removeClass('active');
+          
+          // Показываем целевой шаг
+          $targetStep.addClass('active');
+          
+          // Обновляем прогресс
+          this.updateProgress(stepNumber, $popup);
+      }
+  }
+
+  // Обновление индикатора прогресса
+  updateProgress(currentStep, $popup) {
+      const $progressItems = $popup.find('.popup__progress-item');
+      
+      $progressItems.each(function() {
+          const itemStep = $(this).data('step');
+          $(this).removeClass('active completed');
+          
+          if (itemStep == currentStep) {
+              $(this).addClass('active');
+          } else if (itemStep < currentStep) {
+              $(this).addClass('completed');
+          }
+      });
   }
 }
 
