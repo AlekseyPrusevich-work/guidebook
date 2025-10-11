@@ -12,11 +12,12 @@ html {
   font-size: 16px;
   line-height: 1.2;
   --main-color: #2b2a2c;
-  --main-bg-color: white;
+  --main-bg-color: #EDE7DC;
 }
 
 body {
     margin: 0;
+    background-color: var(--main-bg-color);
 }
 
 .font-bold {
@@ -56,22 +57,27 @@ body {
     margin-right: auto;
     margin-left: auto;
 }
+
+.region__map-svg text {
+    fill: #2F2F2F ;
+}
 .map__region {
     cursor: pointer;
 }
+
 .brest-region__map-region {
-    stroke: white;
+    stroke: #8B7D6B;
     stroke-width: 3px;
-    fill: #fce187;
+    fill: #10B981;
     stroke-miterlimit: 10;
 }
 .brest-region__map-region:hover {
     transition: 0.3s;
-    fill: #ffdc69;
+    fill: #059669;
 }
 .map__point {
     r: 1rem;
-    fill: red;
+    fill: #3B82F6;
     transition: .5s;
     cursor: pointer;
 }

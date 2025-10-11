@@ -61,7 +61,7 @@
 }
 
 .popup__progress-item.active {
-    background: rgb(250, 100, 70);
+    background: #3B82F6;
     transform: scale(1.2);
 }
 
@@ -121,7 +121,7 @@
 .popup__button {
     flex: 1;
     border-radius: 8px;
-    background-color: rgb(250, 100, 70);
+    background-color: #10B981;
     color: white;
     font-size: 16px;
     font-weight: 500;
@@ -133,7 +133,7 @@
 }
 
 .popup__button:hover {
-    background-color: rgb(251, 80, 40);
+    background-color: #059669;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(250, 100, 70, 0.3);
 }
@@ -143,11 +143,11 @@
 }
 
 .popup__button[data-next]:not([data-next=""]) {
-    background-color: #6c757d;
+    background-color: #10B981;
 }
 
 .popup__button[data-next]:not([data-next=""]):hover {
-    background-color: #5a6268;
+    background-color: #059669;
     box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
 }
 
