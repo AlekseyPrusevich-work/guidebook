@@ -10,6 +10,14 @@
     <script type="text/javascript" src="./script/script.js"></script>
 </head>
 <body>
+  <section class="hero">
+    <div class="hero__content">
+      <h1>LET'S SPEAK THE LANGUAGE OF THE VICTORY</h1>
+      <p>THE GREAT PATRIOTIC WAR QUEST MAP IN ACTION</p>
+    </div>
+    <div class="accent-line"></div>
+  </section>
+
     <section class="regions">
 
       <div class="regions__warp container"> 
@@ -97,19 +105,62 @@
     <div id="popup-brest" class="overlay">
       <div class="popup">
         <a class="popup__close">&times;</a>
+                
+        <div class="popup__progress">
+          <div class="popup__progress-item active" data-step="1"></div>
+          <div class="popup__progress-item" data-step="2"></div>
+          <div class="popup__progress-item" data-step="3"></div>
+          <div class="popup__progress-item" data-step="4"></div>
+          <div class="popup__progress-item" data-step="5"></div>
+          <div class="popup__progress-item" data-step="6"></div>
+        </div>
+
         <div class="popup__content">
           <div class="popup__step active" data-step="1">
             <img src="./src/images/places/Brest Fortress.png">
-            <button class="popup__button" type="button" data-next="2">Далее</button>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="2">Далее</button>
+            </div>
           </div>
     
           <div class="popup__step" data-step="2">
             <img src="./src/images/cloud/Brest fortess.png">
-            <button class="popup__button" type="button" data-next="3">Далее</button>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="1">Назад</button>
+              <button class="popup__button" type="button" data-next="3">Далее</button>
+            </div>
           </div>
-    
+                        
           <div class="popup__step" data-step="3">
-            <iframe class="popup__test" src="./src/tests/hesheit.htm" frameborder="0"></iframe>
+            <iframe class="popup__test" src="./src/tests/BrestFortress1.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="2">Назад</button>
+              <button class="popup__button" type="button" data-next="4">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="4">
+            <iframe class="popup__test" src="./src/tests/BrestFortress2.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="3">Назад</button>
+              <button class="popup__button" type="button" data-next="5">Далее</button>
+            </div>
+          </div>
+                        
+          <div class="popup__step" data-step="5">
+            <iframe class="popup__test" src="./src/tests/BrestFortress3.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="4">Назад</button>
+              <button class="popup__button" type="button" data-next="6">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="6">
+            <iframe class="popup__test" src="./src/tests/BrestFortress4.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="5">Назад</button>
+              <button class="popup__button" type="button" data-next="1">К началу</button>
+            </div>
           </div>
         </div>
       </div>
@@ -130,7 +181,6 @@
 
         <div class="popup__content">
           <div class="popup__step active" data-step="1">
-            <h3 class="popup__title">Bronnaya Gora</h3>
             <img src="./src/images/places/Bronnaya Gora.png">
             <div class="popup__controls">
               <button class="popup__button" type="button" data-next="2">Далее</button>
@@ -247,19 +297,62 @@
     <div id="popup-dremlevo" class="overlay">
       <div class="popup">
         <a class="popup__close">&times;</a>
+        
+        <div class="popup__progress">
+          <div class="popup__progress-item active" data-step="1"></div>
+          <div class="popup__progress-item" data-step="2"></div>
+          <div class="popup__progress-item" data-step="3"></div>
+          <div class="popup__progress-item" data-step="4"></div>
+          <div class="popup__progress-item" data-step="5"></div>
+          <div class="popup__progress-item" data-step="6"></div>
+        </div>
+
         <div class="popup__content">
           <div class="popup__step active" data-step="1">
             <img src="./src/images/places/Dremlevo.png">
-            <button class="popup__button" type="button" data-next="2">Далее</button>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="2">Далее</button>
+            </div>
           </div>
     
           <div class="popup__step" data-step="2">
             <img src="./src/images/cloud/Dremlevo.png">
-            <button class="popup__button" type="button" data-next="3">Далее</button>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="1">Назад</button>
+              <button class="popup__button" type="button" data-next="3">Далее</button>
+            </div>
           </div>
-    
+              
           <div class="popup__step" data-step="3">
-            <iframe class="popup__test" src="./src/tests/hesheit.htm" frameborder="0"></iframe>
+            <iframe class="popup__test" src="./src/tests/Dremlevo1.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="2">Назад</button>
+              <button class="popup__button" type="button" data-next="4">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="4">
+            <iframe class="popup__test" src="./src/tests/Dremlevo2.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="3">Назад</button>
+              <button class="popup__button" type="button" data-next="5">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="5">
+            <iframe class="popup__test" src="./src/tests/Dremlevo3.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="4">Назад</button>
+              <button class="popup__button" type="button" data-next="6">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="6">
+            <iframe class="popup__test" src="./src/tests/Dremlevo4.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="5">Назад</button>
+              <button class="popup__button" type="button" data-next="1">К началу</button>
+            </div>
           </div>
         </div>
       </div>
@@ -268,19 +361,62 @@
     <div id="popup-baranovichi" class="overlay">
       <div class="popup">
         <a class="popup__close">&times;</a>
+                
+        <div class="popup__progress">
+          <div class="popup__progress-item active" data-step="1"></div>
+          <div class="popup__progress-item" data-step="2"></div>
+          <div class="popup__progress-item" data-step="3"></div>
+          <div class="popup__progress-item" data-step="4"></div>
+          <div class="popup__progress-item" data-step="5"></div>
+          <div class="popup__progress-item" data-step="6"></div>
+        </div>
+
         <div class="popup__content">
           <div class="popup__step active" data-step="1">
             <img src="./src/images/places/Gai Forest.png">
-            <button class="popup__button" type="button" data-next="2">Далее</button>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="2">Далее</button>
+            </div>
           </div>
     
           <div class="popup__step" data-step="2">
             <img src="./src/images/cloud/Gai forest.png">
-            <button class="popup__button" type="button" data-next="3">Далее</button>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="1">Назад</button>
+              <button class="popup__button" type="button" data-next="3">Далее</button>
+            </div>
           </div>
-    
+              
           <div class="popup__step" data-step="3">
-            <iframe class="popup__test" src="./src/tests/hesheit.htm" frameborder="0"></iframe>
+            <iframe class="popup__test" src="./src/tests/Gai1.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="2">Назад</button>
+              <button class="popup__button" type="button" data-next="4">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="4">
+            <iframe class="popup__test" src="./src/tests/Gai2.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="3">Назад</button>
+              <button class="popup__button" type="button" data-next="5">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="5">
+            <iframe class="popup__test" src="./src/tests/Gai3.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="4">Назад</button>
+              <button class="popup__button" type="button" data-next="6">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="6">
+            <iframe class="popup__test" src="./src/tests/Gai4.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="5">Назад</button>
+              <button class="popup__button" type="button" data-next="1">К началу</button>
+            </div>
           </div>
         </div>
       </div>
@@ -353,19 +489,62 @@
     <div id="popup-koldychevo" class="overlay">
       <div class="popup">
         <a class="popup__close">&times;</a>
+    
+        <div class="popup__progress">
+          <div class="popup__progress-item active" data-step="1"></div>
+          <div class="popup__progress-item" data-step="2"></div>
+          <div class="popup__progress-item" data-step="3"></div>
+          <div class="popup__progress-item" data-step="4"></div>
+          <div class="popup__progress-item" data-step="5"></div>
+          <div class="popup__progress-item" data-step="6"></div>
+        </div>
+
         <div class="popup__content">
           <div class="popup__step active" data-step="1">
             <img src="./src/images/places/Koldychevo.png">
-            <button class="popup__button" type="button" data-next="2">Далее</button>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="2">Далее</button>
+            </div>
           </div>
     
           <div class="popup__step" data-step="2">
             <img src="./src/images/cloud/Koldychevo.png">
-            <button class="popup__button" type="button" data-next="3">Далее</button>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="1">Назад</button>
+              <button class="popup__button" type="button" data-next="3">Далее</button>
+            </div>
           </div>
-    
+
           <div class="popup__step" data-step="3">
-            <iframe class="popup__test" src="./src/tests/hesheit.htm" frameborder="0"></iframe>
+            <iframe class="popup__test" src="./src/tests/Koldychevo1.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="2">Назад</button>
+              <button class="popup__button" type="button" data-next="4">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="4">
+            <iframe class="popup__test" src="./src/tests/Koldychevo2.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="3">Назад</button>
+              <button class="popup__button" type="button" data-next="5">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="5">
+            <iframe class="popup__test" src="./src/tests/Koldychevo3.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="4">Назад</button>
+              <button class="popup__button" type="button" data-next="6">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="6">
+            <iframe class="popup__test" src="./src/tests/Koldychevo4.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="5">Назад</button>
+              <button class="popup__button" type="button" data-next="1">К началу</button>
+            </div>
           </div>
         </div>
       </div>
@@ -374,19 +553,62 @@
     <div id="popup-337" class="overlay">
       <div class="popup">
         <a class="popup__close">&times;</a>
+   
+        <div class="popup__progress">
+          <div class="popup__progress-item active" data-step="1"></div>
+          <div class="popup__progress-item" data-step="2"></div>
+          <div class="popup__progress-item" data-step="3"></div>
+          <div class="popup__progress-item" data-step="4"></div>
+          <div class="popup__progress-item" data-step="5"></div>
+          <div class="popup__progress-item" data-step="6"></div>
+        </div>
+
         <div class="popup__content">
           <div class="popup__step active" data-step="1">
             <img src="./src/images/places/Stalag No.337.png">
-            <button class="popup__button" type="button" data-next="2">Далее</button>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="2">Далее</button>
+            </div>
           </div>
     
           <div class="popup__step" data-step="2">
             <img src="./src/images/cloud/shtalag.png">
-            <button class="popup__button" type="button" data-next="3">Далее</button>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="1">Назад</button>
+              <button class="popup__button" type="button" data-next="3">Далее</button>
+            </div>
           </div>
-    
+              
           <div class="popup__step" data-step="3">
-            <iframe class="popup__test" src="./src/tests/hesheit.htm" frameborder="0"></iframe>
+            <iframe class="popup__test" src="./src/tests/Stalag1.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="2">Назад</button>
+              <button class="popup__button" type="button" data-next="4">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="4">
+            <iframe class="popup__test" src="./src/tests/Stalag2.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="3">Назад</button>
+              <button class="popup__button" type="button" data-next="5">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="5">
+            <iframe class="popup__test" src="./src/tests/Stalag3.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="4">Назад</button>
+              <button class="popup__button" type="button" data-next="6">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="6">
+            <iframe class="popup__test" src="./src/tests/Stalag4.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="5">Назад</button>
+              <button class="popup__button" type="button" data-next="1">К началу</button>
+            </div>
           </div>
         </div>
       </div>
@@ -395,19 +617,62 @@
     <div id="popup-zditovo" class="overlay">
       <div class="popup">
         <a class="popup__close">&times;</a>
+
+        <div class="popup__progress">
+          <div class="popup__progress-item active" data-step="1"></div>
+          <div class="popup__progress-item" data-step="2"></div>
+          <div class="popup__progress-item" data-step="3"></div>
+          <div class="popup__progress-item" data-step="4"></div>
+          <div class="popup__progress-item" data-step="5"></div>
+          <div class="popup__progress-item" data-step="6"></div>
+        </div>
+
         <div class="popup__content">
           <div class="popup__step active" data-step="1">
             <img src="./src/images/places/Zditovo.png">
-            <button class="popup__button" type="button" data-next="2">Далее</button>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="2">Далее</button>
+            </div>
           </div>
     
           <div class="popup__step" data-step="2">
             <img src="./src/images/cloud/Zditovo.png">
-            <button class="popup__button" type="button" data-next="3">Далее</button>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="1">Назад</button>
+              <button class="popup__button" type="button" data-next="3">Далее</button>
+            </div>
           </div>
-    
+              
           <div class="popup__step" data-step="3">
-            <iframe class="popup__test" src="./src/tests/hesheit.htm" frameborder="0"></iframe>
+            <iframe class="popup__test" src="./src/tests/Zditovo1.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="2">Назад</button>
+              <button class="popup__button" type="button" data-next="4">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="4">
+            <iframe class="popup__test" src="./src/tests/Zditovo2.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="3">Назад</button>
+              <button class="popup__button" type="button" data-next="5">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="5">
+            <iframe class="popup__test" src="./src/tests/Zditovo3.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="4">Назад</button>
+              <button class="popup__button" type="button" data-next="6">Далее</button>
+            </div>
+          </div>
+              
+          <div class="popup__step" data-step="6">
+            <iframe class="popup__test" src="./src/tests/Zditovo4.htm" frameborder="0"></iframe>
+            <div class="popup__controls">
+              <button class="popup__button" type="button" data-next="5">Назад</button>
+              <button class="popup__button" type="button" data-next="1">К началу</button>
+            </div>
           </div>
         </div>
       </div>

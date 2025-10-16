@@ -53,7 +53,7 @@ body {
 }
 .region__map-svg {
     display: block;
-    max-height: 90vh;
+    max-height: 80vh;
     margin-right: auto;
     margin-left: auto;
 }
@@ -115,4 +115,50 @@ body {
     font-size: 0.7rem;
     padding: 0;
     margin: 0;
+}
+
+.hero {
+  background: rgba(248, 247, 242, 0.92); /* Светлый кремовый, как бумага карты */
+  padding: 35px 25px 25px 25px;
+  text-align: center;
+  position: relative;
+  border-left: 5px solid #2E5C6E; /* Глубокий синий, как реки на карте */
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.hero h1 {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 2.4rem;
+  color: #2A4B5A; /* Темно-сине-зеленый, как лесные массивы */
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+  letter-spacing: 1.5px;
+  line-height: 1.3;
+}
+
+.hero p {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 1.2rem;
+  color: #5A7D8C; /* Серо-голубой, как второстепенные надписи на карте */
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.accent-line {
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #2E5C6E 20%,     /* Синий - водоемы */
+    #4A7C59 50%,     /* Зеленый - леса и поля */
+    #8B4513 80%,     /* Коричневый - рельеф */
+    transparent 100%);
+  margin-top: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2px;
 }

@@ -159,10 +159,26 @@
     border: 1px solid #e0e0e0;
 }
 
+@media (max-width: 1440px) {
+
+    .popup {
+        margin-top: 40px;
+        padding: 24px;
+    }
+    
+    .popup__content img {
+        max-height: 60vh;
+    }
+        
+    .popup__controls {
+        margin-top: 24px;
+    }
+}
+
 @media (max-width: 768px) {
     .popup {
         margin: 20px auto;
-        padding: 20px 15px;
+        padding: 20px 16px;
         width: 95%;
         border-radius: 8px;
     }
@@ -185,7 +201,6 @@
     .popup__controls {
         flex-direction: column;
         gap: 10px;
-        margin-top: 25px;
     }
     
     .popup__button {
