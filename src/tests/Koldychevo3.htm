@@ -17,9 +17,7 @@ Find out if the sentences are true or false
 <!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
 
 
-
 <style>
-
 
 /* This is the CSS stylesheet used in the exercise. */
 /* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
@@ -28,34 +26,34 @@ Find out if the sentences are true or false
 
 /* Made with executable version 7.0 Release 3 Build 0 */
 
-
-
 /* CSS variables for colours. */
 :root{
-	--strFontFace:       Geneva,Arial,sans-serif;
+	--strFontFace:       'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	--strFontSize:       medium;
-	--strTextColor:      #000000;
-	--strTitleColor:     #000000;
+	--strTextColor:      #2c3e50;
+	--strTitleColor:     #2c3e50;
 
-	--strFuncLightColor: #ffffff;
-	--strFuncShadeColor: #7f7f7f;
-	--strLinkColor:      #0000FF;
-	--strVLinkColor:     #0000CC;
+	--strFuncLightColor: #3498db;
+	--strFuncShadeColor: #2980b9;
+	--strLinkColor:      #3498db;
+	--strVLinkColor:     #2980b9;
 	
-	--strNavBarColor:    #000000;
-	--strNavLightColor:  #7f7f7f;
-	--strNavShadeColor:  #000000;
+	--strNavBarColor:    #e74c3c;
+	--strNavLightColor:  #e74c3c;
+	--strNavShadeColor:  #c0392b;
 	--strNavTextColor:   #ffffff;
 	
-	--strPageBGColor:    #C0C0C0;
-	--strExBGColor:      #FFFFFF;
+	--strPageBGColor:    #ecf0f1;
+	--strExBGColor:      #ffffff;
+
+	--green: #10B981;
+	--greenDark: #059669;
 }
 
 body{
 	font-family: var(--strFontFace);
 	background-color: var(--strPageBGColor);
 	color: var(--strTextColor);
- 
 	margin-right: 5%;
 	margin-left: 5%;
 	font-size: var(--strFontSize);
@@ -74,9 +72,12 @@ table,div,span,td{
 }
 
 div.Titles{
-	padding: 0.5em;;
+	padding: 0.5em;
 	text-align: center;
 	color: var(--strTitleColor);
+	background-color: var(--strFuncLightColor);
+    border-radius: 1em;
+    margin-bottom: 1.5em;
 }
 
 button{
@@ -86,13 +87,17 @@ button{
 }
 
 .ExerciseTitle{
-	font-size: 140%;
-	color: var(--strTitleColor);
+	font-size: 160%;
+	color: var(--strExBGColor);
+	margin-top: 8px;
+	margin-bottom: 12px;
 }
 
 .ExerciseSubtitle{
 	font-size: 120%;
-	color: var(--strTitleColor);
+	color: var(--strExBGColor);
+	margin-top: 12px;
+	margin-bottom: 8px;
 }
 
 div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
@@ -100,21 +105,35 @@ div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
 	text-align: center;
 	font-size: 1em;
 	color: var(--strTextColor);
-	padding: 0.5em;
+	padding: 1em;
 	border-style: solid;
 	border-width: 1px 1px 1px 1px;
-	border-color: var(--strTextColor);
-	margin-bottom: 1px;
+	border-color: var(--strFuncShadeColor);
 }
 
-div.ReadingContainer, div.ExerciseContainer{
+div.StdDiv {
+	margin-bottom: 0.5em;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+#Instructions {
+	text-align: left;
+}
+
+div.ReadingContainer, div.ExerciseContainer {
 	min-width: 15em;
 	flex-grow: 1;
 	flex-basis: 0;
 	margin: 1px;
+	border-radius: 0.5em;
 }
 
-div#ContainerDiv{
+div.ExerciseContainer:not(.JMatchDrag) {
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+div#ContainerDiv:not(.JMatchDrag) {
 	margin: -1px;
 	padding: 0;
 	border: none;
@@ -176,14 +195,6 @@ span#TimerText{
 	color: var(--strTitleColor);
 }
 
-span.Instructions{
-
-}
-
-div.ExerciseText{
-
-}
-
 .FeedbackText, .FeedbackText span.CorrectAnswer, .FeedbackText span.Guess, .FeedbackText span.Answer{
 	color: var(--strTitleColor);
 }
@@ -201,13 +212,11 @@ div.ExerciseText{
 	text-align: left;
 }
 
-span.CorrectMark{
-
-}
-
 input, textarea{
-	font-family: var(--strFontFace);
+	font-family: var(--strTextColor);
 	font-size: 120%;
+	border-radius: .25em;
+	border-color: var(--strFuncShadeColor);
 }
 
 select{
@@ -215,23 +224,22 @@ select{
 }
 
 div.Feedback {
-	background-color: var(--strPageBGColor);
+	background-color: var(--strExBGColor);
 	left: 33%;
 	width: 34%;
 	top: 33%;
 	z-index: 1;
 	border-style: solid;
 	border-width: 1px;
+	border-color: var(--strFuncShadeColor);
 	padding: 5px;
+	border-radius: 1em;
 	text-align: center;
 	color: var(--strTitleColor);
 	position: absolute;
 	display: none;
 	font-size: 1em;
 }
-
-
-
 
 div.ExerciseDiv{
 	color: var(--strTextColor);
@@ -439,6 +447,12 @@ div#ClueEntry{
 	margin-bottom: 1em;
 }
 
+div#ClueEntry form {
+	display: flex;
+    align-items: center;
+	gap: 8px;
+}
+
 /* Keypad styles */
 
 div.Keypad{
@@ -535,17 +549,10 @@ div.ShortAnswer{
 	border-radius: 0.5em;
 	padding: 0.5em;
 	min-width: 3em;
-
-	border-left-color: var(--strFuncLightColor);
-	border-top-color: var(--strFuncLightColor);
-	border-right-color: var(--strFuncShadeColor);
-	border-bottom-color: var(--strFuncShadeColor);
-	color: var(--strTextColor);
-	background-color: var(--strExBGColor);
-
-	border-width: 1pt;
+	color: var(--strExBGColor);
+	background-color: var(--green);
 	cursor: pointer;	
-	box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+	border: none;
 }
 
 .FuncButton:active {
@@ -553,8 +560,7 @@ div.ShortAnswer{
 }
 
 .FuncButton:hover{
-	color: var(--strExBGColor);
-	background-color: var(--strTextColor);
+	background-color: var(--greenDark);
 }
 
 /*BeginNavBarStyle*/
@@ -608,9 +614,7 @@ div.CardStyle {
 	border-radius: 0.5em;
 	padding: 0.5em;
 	min-width: 2em;
-	border-width: 1pt;
 	color: var(--strTextColor);
-	box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
 	background-color: var(--strExBGColor);
 	left: -50px;
 	top: -50px;
@@ -618,6 +622,7 @@ div.CardStyle {
 	touch-action: none;
 	user-select: none;
 	box-sizing: border-box;
+	border: 1px solid var(--strFuncShadeColor);
 }
 
 div.CardStyleCentered{
@@ -631,6 +636,7 @@ div.CardStyleCentered{
 
 
 </style>
+
 
 <script>
 
